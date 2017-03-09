@@ -8,22 +8,23 @@ $(document).ready(function(){
 
 	function newCity() {
 		console.log('this is working');
-		if (city[0]) {
+		var cityType = $("#city-type").val();
+		if (cityType === city[0]) {
 			$("body").attr("class", "nyc");
-		} else if (city[1]) {
+		} else if (cityType === city[1]) {
 			console.log('working2')
 			$("body").attr("class", "sf");
-		} else if (city[2]) {
+		} else if (cityType === city[2]) {
 			$("body").attr("class", "LA");
-		} else if (city[3]) {
+		} else if (cityType === city[3]) {
 			$("body").attr("class", "austin");
-		} else if (city[4]) {
+		} else if (cityType === city[4]) {
 			$("body").attr("class", "sydney");	
 		}
 	}
 
     $.each(city, function(val, text) {
-        $('#city-type').append( $('<option></option>').val(val).html(text) )
+        $("#city-type").append( $("<option></option>").val(val).html(text) )
         }); 
 
 	$("#city-type").change(newCity);
