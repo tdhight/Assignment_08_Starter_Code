@@ -8,17 +8,17 @@ $(document).ready(function(){
 
 	function newCity() {
 		console.log('this is working');
-		var cityType = $("#city-type").val();
-		if (cityType === city[0]) {
+		var city = $("#city-type").val();
+		if (city === city[0]) {
 			$("body").attr("class", "nyc");
-		} else if (cityType === city[1]) {
+		} else if (city === city[1]) {
 			console.log('working2')
 			$("body").attr("class", "sf");
-		} else if (cityType === city[2]) {
+		} else if (city === city[2]) {
 			$("body").attr("class", "LA");
-		} else if (cityType === city[3]) {
+		} else if (city === city[3]) {
 			$("body").attr("class", "austin");
-		} else if (cityType === city[4]) {
+		} else if (city === city[4]) {
 			$("body").attr("class", "sydney");	
 		}
 	}
